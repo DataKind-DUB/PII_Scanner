@@ -1,0 +1,26 @@
+
+1. Murphy	26. Wilson	51. Sweeney	76. Kenny
+2. Kelly	27. Dunne	52. Hayes	77. Sheehan
+3. O'Sullivan	28. Brennan	53. Kavanagh	78. Ward
+4. Walsh	29. Burke	54. Power	79. Whelan
+5. Smith (Mcgowan)	30. Collins	55. McGrath	80. Lyons
+6. O'Brien	31. Campbell	56. Moran	81. Reid
+7. Byrne	32. Clarke	57. Brady	82. Graham
+8. Ryan	33. Johns(t)on	58. Stewart/Stuart	83. Higgins
+9. O'Connor	34. Hughes	59. Casey	84. Cullen
+10. O'Neill	35. O'Farrell	60. Foley	85. Keane/MacCahan(e)
+11. O'Reilly	36. Fitzgerald	61. Fitzpatrick	86. King
+12. Doyle	37. Brown	62. O'Leary	87. Maher/Meagher
+13. McCarthy	38. Martin/MacGillmartin	63. MacDonnell	88. MacKenna
+14. Gallagher	39. Maguire	64. MacMahon	89. Bell
+15. O'Doherty	40. Nolan/Knowlan	65. Donnelly	90. Scott
+16. Kennedy	41. Flynn	66. Regan	91. Hogan
+17. Lynch	42. Thom(p)son	67. Donovan	92. O'Keefe
+18. Murray	43. O'Callaghan	68. Burns	93. Magee
+19. Quinn	44. O'Donnell	69. Flanagan	94. MacNamara
+20. Moore	45. Duffy	70. Mullan	95. MacDonald
+21. McLaughlin	46. O'Mahon(e)y	71. Barry	96. MacDermot(t)
+22. O'Carroll	47. Boyle	72. Kane	97. Moloney
+23. Connolly	48. Healy	73. Robinson	98. O'Rourke
+24. Daly	49. O'Shea	74. Cunningham	99. Buckley
+25. O'Connell	50. White	75. Griffin	100. O'Dwyer
