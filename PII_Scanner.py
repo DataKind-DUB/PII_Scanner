@@ -25,9 +25,26 @@ def print_names(filename):
 		named_entities = [chunk for chunk in ne_chunk(tokens_with_pos) if isinstance(chunk, Tree)]
 		for i in named_entities:
 			print(i)
+			
+			
+def replace_names(filename, outputfile = None, replacetoken = '***'):
+	"""(str) -> None
+	Find all the names into a text file and print them into the terminal
+	"""
+	with open(filename, 'r') as f:
+		rawtext = f.read()
+	tokens = word_tokenize(rawtext)
+	tokens_with_pos = nltk.pos_tag(tokens)
+	person_entities = set([chunk for chunk in ne_chunk(tokens_with_pos) if isinstance(chunk, Tree)])
+	if not outputfile: outputfile = filename
+	with open(outputfile, 'w') as f:
+		for tok in tokens_with_pos:
+			if tok[1] == 'NNP': f.write(replacetoken+' ')
+			else: f.write(tok[0]+' ')
 
 
 if __name__ == "__main__":
 	#print(txt_to_set("Irish Name Dict with Number.txt"))
 	print_names('Input_text2.txt')
+	replace_names('Input_text2.txt', 'test')
 
