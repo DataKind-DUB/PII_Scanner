@@ -1,3 +1,10 @@
+'''
+    Author: Maria Alecu
+    Date created: 11/11/2017
+    Date last modified:  
+    Python Version: 3.5
+'''
+
 import nltk
 from nltk.tokenize import word_tokenize
 
