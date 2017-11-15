@@ -18,6 +18,8 @@ from nltk.chunk import ne_chunk
 from namelist import txt_to_set
 
 
+PUNCTUATION = ",.?!;:'"
+
 def print_names(filename):
 	"""(str) -> None
 	Find all the names into a text file and print them into the terminal
@@ -68,8 +70,9 @@ def replace_proper_names(filename, outputfile = None, replacetoken = '***'):
 	if not outputfile: outputfile = filename
 	with open(outputfile, 'w') as f:
 		for tok in tokens_with_pos:
-			if tok[1] == 'NNP': f.write(replacetoken+' ')
-			else: f.write(tok[0]+' ')
+			if tok[1] == 'NNP': f.write(' ' + replacetoken)
+			elif tok[0] in PUNCTUATION or "'" in tok[0]: f.write(tok[0])
+			else: f.write(' ' + tok[0])
 	
 			
 def replace_person_names_version2(filename, outputfile = None, replacetoken = '***'):
@@ -87,9 +90,10 @@ def replace_person_names_version2(filename, outputfile = None, replacetoken = '*
 	with open(outputfile, 'w') as f:
 		for tok in chunked_tokens:
 			if isinstance(tok, Tree) and tok.label() == 'PERSON':#if the token is a person, replace by replacetoken
-				f.write(replacetoken + ' ')
-			elif isinstance(tok, Tree): f.write(' '.join(x[0] for x in tok) + ' ')
-			else: f.write(tok[0] + ' ')
+				f.write(' ' + replacetoken)
+			elif isinstance(tok, Tree): f.write(' ' + ' '.join(x[0] for x in tok))
+			elif tok[0] in PUNCTUATION or "'" in tok[0]: f.write(tok[0])
+			else: f.write(' ' + tok[0])
 			
 			
 def replace_person_mail_names(filename, outputfile = None, replacetoken = '***'):
@@ -114,8 +118,9 @@ def replace_person_mail_names(filename, outputfile = None, replacetoken = '***')
 				prec = replacetoken
 				curr = '@'
 			else: curr = tok[0]
-			f.write(prec + ' ')
-			prec = curr
+			f.write(prec)
+			if curr in PUNCTUATION or "'" in curr: prec = curr
+			else: prec = ' ' + curr
 		f.write(curr)
 
 		
@@ -151,7 +156,7 @@ def replace_person_names_version1(filename, outputfile = None, replacetoken = '*
 if __name__ == "__main__":
 	#print(txt_to_set("Irish Name Dict with Number.txt"))
 #	print_names("Input_text2.txt")
-#	replace_proper_names('Input_text2.txt', 'test0')
-#	replace_person_names_version2('Input_text2.txt', 'test1')
+	replace_proper_names('Input_text2.txt', 'test0')
+	replace_person_names_version2('Input_text2.txt', 'test1')
 	replace_person_mail_names('input_text.txt', 'test2')
 
