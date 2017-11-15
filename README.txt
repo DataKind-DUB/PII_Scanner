@@ -1,7 +1,13 @@
 
 PII_Scanner is a small programm to scan text file and remplace the persons names, email adresses and phone numbers in it by ***.
 
+#-------------------------------------------------------------------------
+
+INSTALLATION:
+
 For this programm to work you need Python 3.5 and the Nltk library.
+
+The first time you run it, the programm may ask for modules like 'punkt', 'averaged_perceptron_tagger', 'maxent_ne_chunker' or 'words'. In these cases, add 'nltk.download(modulename)' in the import lines
 
 #-------------------------------------------------------------------------
 
@@ -20,6 +26,7 @@ WHAT PII_Scanner WILL DO (eventually):
 - have a better replacement efficiency for persons names
 - replace persons names written without uppercase first letter
 - replace adresses
+- include carriage returns
 
 #-------------------------------------------------------------------------
 
